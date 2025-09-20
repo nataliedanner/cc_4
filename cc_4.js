@@ -51,3 +51,24 @@ for (let product of products) {
     } 
 }
 
+// Create customerType discount
+
+let customerType = "student";
+let extraDiscount = 0;
+if (customerType === "student") {
+    extraDiscount = 0.05;
+}
+else if (customerType === "senior") {
+    extraDiscount = 0.07;
+}
+else {extraDiscount = 0};
+
+// Simulate checkout process
+
+let subtotal = 0;
+for (let i = 1; i <= 3; i++) {
+    subtotal += product.price;
+    (product.invetory--)
+let finalTotal = subtotal * (1 - extraDiscount);
+console.log(`Customer ${i}: $${finalTotal.toFixed(2)}`);
+}
