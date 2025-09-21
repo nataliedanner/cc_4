@@ -1,3 +1,5 @@
+// Coding Challenge 4
+// Create array of products
 let products = [
     {
         name: "Bread",
@@ -50,7 +52,7 @@ for (let product of products) {
             discount = 0;
     } 
 }
-console.log(products[0].price);
+
 // Create customerType discount
 
 let customerType = "student";
@@ -81,12 +83,10 @@ let customers = [
         customerType: "regular",
         cart: "Hoodie",
     },
-]
+];
 for (let i = 1; i <= customers.length; i++) {
-let subtotal = 0;
-
 for (let customer of customers) {
-    
+    let subtotal = 0;
     switch (customer.cart) {
     case "Bread": 
         subtotal += (products[0].price);
@@ -110,9 +110,14 @@ for (let customer of customers) {
         break;
     default:
         subtotal = 0
-}}
-
+ };
 let finalTotal = subtotal * (1 - extraDiscount);
 console.log(`Customer ${i}: $${finalTotal.toFixed(2)}`);
-console.log()
 }
+};
+
+// Key/value pair for product hoodie
+
+for (let key in products[1]) {
+    console.log(`${key}: ${products[1][key]}`);
+};
