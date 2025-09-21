@@ -84,7 +84,6 @@ let customers = [
         cart: "Hoodie",
     },
 ];
-for (let i = 1; i <= customers.length; i++) {
 for (let customer of customers) {
     let subtotal = 0;
     switch (customer.cart) {
@@ -111,13 +110,18 @@ for (let customer of customers) {
     default:
         subtotal = 0
  };
-let finalTotal = subtotal * (1 - extraDiscount);
+for (let i = 1; i <= customers.length; i++) {
+ let finalTotal = subtotal * (1 - extraDiscount);
 console.log(`Customer ${i}: $${finalTotal.toFixed(2)}`);
-}
 };
-
+};
 // Key/value pair for product hoodie
 
 for (let key in products[1]) {
     console.log(`${key}: ${products[1][key]}`);
 };
+
+ // Log all product info
+
+let entries = Object.entries(products);
+console.log(entries);
