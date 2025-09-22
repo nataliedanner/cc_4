@@ -50,8 +50,8 @@ for (let product of products) {
             break;
         default:
             discount = 0;
-    } 
-}
+    };
+};
 
 // Create customerType discount
 
@@ -84,6 +84,7 @@ let customers = [
         cart: "Hoodie",
     },
 ];
+
 for (let customer of customers) {
     let subtotal = 0;
     switch (customer.cart) {
@@ -111,7 +112,7 @@ for (let customer of customers) {
         subtotal = 0
  };
 for (let i = 1; i <= customers.length; i++) {
- let finalTotal = subtotal * (1 - extraDiscount);
+let finalTotal = subtotal * (1 - extraDiscount);
 console.log(`Customer ${i}: $${finalTotal.toFixed(2)}`);
 };
 };
